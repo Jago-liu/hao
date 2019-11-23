@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Document</title><link rel="stylesheet" href="../css/base.css"><link rel="stylesheet" href="../css/carthead.css"></head><body><div id="top"><div class="pic fl"><img src="../image/logo_new.jpg" alt=""></div><div class="help fr"><p class="fl"><span id="span1">您好，<a href="###" id="span4">欢迎光临凡客诚品。</a></span> <span id="span2"><a href="###">登录</a></span> <span>|</span> <span id="span3"><a href="###">注册</a></span></p><a href="###">帮助中心</a></div></div></body><script src="../lib/jquery-1.10.1.min.js"></script><script>let userphone = getCookie('userphone');
+        if(userphone){
+            $('#span4').html(userphone);
+            $('#span2 a').html('退出登录');
+            $('#span3 a').html('更换用户');
+            $('#span2').click(function(){
+                let confirm1 = confirm('请确认是否退出？');
+                if(confirm1){
+                    removeCookie('userphone')
+                    location.href="../index.html";
+                }
+                
+            })
+            $('#span3').click(function(){
+                let confirm2 = confirm('请确认是否退出？');
+                if(confirm2){
+                    removeCookie('userphone')
+                    location.href="../index.html";
+                }
+            })
+        }else{
+            alert('您好，请先登录');
+            location.href="login.html";
+        }
+
+        $('.pic').click(function(){
+            location.href="../index.html";
+        })</script></html>

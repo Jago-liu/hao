@@ -1,0 +1,352 @@
+html,body{
+    font-family: Arial,Helvetica,sans-serif,"宋体";
+}
+#content{
+    width: 980px;
+    margin: auto;
+    .location{
+        width: 540px;
+        height: 28px;
+        margin-top: 10px;
+        margin-left: 0;
+        background: url(../css/img/newProm.gif);
+        background-position: 0 0;
+        margin-bottom: 10px;
+        em{
+            color: #fff;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 28px;
+            text-align: center;
+            width: 170px;
+            height: 28px;
+            font-family:Arial,Helvetica,sans-serif,"宋体";
+            /* font: 12px Arial,Helvetica,sans-serif,宋体; */
+        }
+        span{
+            color: #666;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 28px;
+            text-align: center;
+            width: 170px;
+            height: 28px;
+            font-family:Arial,Helvetica,sans-serif,"宋体";
+        }
+    }
+    .car-gift{
+        .car1{
+            height: 30px;
+            overflow: hidden;
+            padding-left: 45px;
+            width: 935px;
+            
+            background: url(../css/img/newpromotion.gif) no-repeat 0 0;
+            background-position: -460px 0;
+        
+            h2{
+            font-size: 18px;
+            line-height: 38px;
+            font-weight: bold;
+            font-family: Arial,Helvetica,sans-serif,"宋体";
+            }
+        }
+        .car2{
+            margin-top: 6px;
+            color: #656565;
+            line-height: 20px;
+            font: 12px Arial,Helvetica,sans-serif,宋体;
+            span{
+                
+                color: #a10000;
+            }
+        }
+        .car3{
+            
+            .car3-1{
+                text-align: center;
+                width: 978px;
+                height: 37px;
+                margin-top: 10px;
+                border: 1px solid #B7B7B7;
+                background: url(//ssl.vanclimg.com/shopping/newpromotions/carthd.png) repeat-x;
+                font-size: 12px;
+                line-height: 37px;
+                font-family: Arial,Helvetica,sans-serif,"宋体";
+                font-weight: bold;
+                .all{
+                    width: 80px;
+                    margin-left: 16px;
+                    input{
+                        width: 13px;
+                        height: 13px;
+                        margin-right: 10px;
+                    }
+                }
+                .image{
+                    width: 50px;
+                }
+                .goods{
+                    width: 342px;
+                }
+                .size{
+                    width: 50px;
+                }
+                .price{
+                    width: 80px;
+                }
+                .num{
+                    width: 100px;
+                }
+                .discount{
+                    width: 55px;
+                }
+                .count{
+                    width: 93px;
+                }
+                .make{
+                    width: 78px;
+                }
+            }
+            .car3-2{
+                width: 978px;
+                border: 1px solid #B7B7B7;
+                li{
+                    margin: 16px;
+                    height: 70px;
+                    background: #F8F8F8;
+                    .no1{
+                        width: 80px;
+                        vertical-align: middle;
+                        #input1{
+                        width: 13px;
+                        height: 13px;
+                        margin-left: 34px;
+                        margin-top: 28px;
+                        }
+                    }
+                    
+                    .image{
+                        width: 50px;
+                        padding: 10px 0;
+                        
+                        height: 50px;
+                        cursor: pointer;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            border: 1px solid #C8C8C8;
+                        }
+                    }
+                    .title{
+                        width: 342px;
+                        p{
+                            font-size: 12px;
+                            line-height: 70px;
+                            /* margin-left: 10px; */
+                            text-align: center;
+                            a{
+                               color: #333; 
+                               &:hover{
+                                   color: #a10000;
+                               }
+                            }
+                        }
+                    }
+                    .sizelist{
+                        width: 50px;
+                        text-align: center;
+                        span{
+                            a{
+                                font-size: 12px;
+                                line-height: 70px;
+                                color: #333;
+                                &:hover{
+                                    color: #a10000;
+                                }
+                            }
+                        }
+                    }
+                    .pricelist{
+                        width: 80px;
+                        text-align: center;
+                        vertical-align: middle;
+                        span{
+                            display: inline-block;
+                            font-size: 12px;
+                            line-height: 70px;
+                            color: #333;
+                        }
+                    }
+                    .numlist{
+                        width: 100px;
+                        text-align: center;
+                        #prev{
+                            display: inline-block;
+                            border: 0 none;
+                            height: 20px;
+                            font-size: 20px;
+                            line-height: 70px;
+                            vertical-align: middle;
+                            width: 17px;
+                            background: url(//ssl.vanclimg.com/shopping/shopping3/cartsprite.png) no-repeat;
+                            overflow: hidden;
+                            background-position: -51px 0;
+                            color: #333;
+                            text-indent: -9999px;
+                            margin-top: 25px;
+                        }
+                        #next{
+                            display: inline-block;
+                            border: 0 none;
+                            height: 20px;
+                            line-height: 70px;
+                            vertical-align: middle;
+                            width: 17px;
+                            background: url(//ssl.vanclimg.com/shopping/shopping3/cartsprite.png) no-repeat;
+                            overflow: hidden;
+                            background-position: 0 0;
+                            color: #333;
+                            margin-top: 25px;
+                        }
+                        input{
+                            width: 25px;
+                            height: 18px;
+                            border: 1px solid #D8D8D8;
+                            margin-top: 25px;
+                            text-align: center;
+                        }
+                    }
+                    .youhui{
+                        width: 55px;
+                        text-align: center;
+                        span{
+                            display: inline-block;
+                            font-size: 12px;
+                            line-height: 70px;
+                            color: #333;
+                            
+                        }
+                    }
+                    .xiaoji{
+                        width: 93px;
+                        text-align: center;
+                        span{
+                            display: inline-block;
+                            font-size: 12px;
+                            line-height: 70px;
+                            color: #333;
+                            
+                        }
+                    }
+                    .cuozuo{
+                        width: 78px;
+                        text-align: center;
+                        // margin-right: 15px;
+                        span{
+                            font-size: 12px;
+                            line-height: 70px;
+                            a{
+                                color: #ccc;
+                                &:hover{
+                                    color: #a10000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        .car4{
+            margin-top: 11px;
+            border: 1px solid #EBE5BB;
+            width: 978px;
+            height: 116px;
+            background: #FFFEF5;
+            margin-bottom: 30px;
+            position: relative;
+            .car44{
+                padding: 12px 10px 0 13px;
+                p{
+                    font-size: 12px;
+                    font-family: Arial,Helvetica,sans-serif,"宋体";
+                    line-height: 25px;
+                    color: #333;
+                    input{
+                        margin-right: 10px;
+                    }
+                    a{
+                        margin-left: 20px;
+                        color: #333;
+                        &:hover{
+                            color: #a10000;
+                        }
+                    }
+                    .sp3{
+                        padding-left: 42px;
+                    }
+                    #total{
+                        color: #a10000;
+                    }
+                    .sp2{
+                        padding-left: 42px;
+                        font-weight: bold;
+                        color: #a10000;
+                    }
+                }
+                .summary{
+                    font-family: Arial,Helvetica,sans-serif,"宋体";
+                    .sum1{
+                        font-size: 12px;
+                        line-height: 50px;
+                        color: #333;
+                        margin-left: 13px;
+                    }
+                    .sum2{
+                        font-size: 24px;
+                        line-height: 50px;
+                        color: #a10000;
+                        font-weight: bold;
+                    }
+                }
+                .jiesuan{
+                    position: absolute;
+                    right: 0;
+                    bottom: 15px;
+                    #shopping{
+                        color: #666;
+                        height: 37px;
+                        line-height: 37px;
+                        margin-left: 10px;
+                        font-size: 14px;
+                        text-align: center;
+                        width: 122px;
+                        display: inline-block;
+                        background: url(//ssl.vanclimg.com/shopping/newpromotions/newpromotion.gif) no-repeat 0 0;
+                        overflow: hidden;
+                        background-position: -160px 0;
+                        vertical-align: middle;
+                    }
+                    #pay{
+                        color: #fff;
+                        height: 50px;
+                        font-size: 20px;
+                        line-height: 50px;
+                        margin-left: 10px;
+                        padding-left: 50px;
+                        width: 110px;
+                        display: inline-block;
+                        background: url(//ssl.vanclimg.com/shopping/newpromotions/newpromotion.gif) no-repeat 0 0;
+                        overflow: hidden;
+                        background-position: 0 0;
+                        cursor: pointer;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}

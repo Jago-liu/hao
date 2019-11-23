@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>first</title><link rel="stylesheet" href="../css/base.css"><link rel="stylesheet" href="../css/first.css"></head><body><div id="headTop"><div class="mid"><ul class="list"><li id="loginchange">您好,欢迎光临凡客诚品！</li><li id="login1"><a href="###">登录</a></li><li>|</li><li id="regin"><a href="###">注册</a></li><li class="getred"><a href="###">我的订单</a></li><li class="getred"><a href="###"><span class="laba"></span> 网站公告</a></li></ul><div class="smallLogo"><a href="###" class="wechat fl"><span class="wechatpic"></span> </a><a href="###" class="weibo fl"><span class="weibopic"></span></a></div></div></div><div id="navi"><div class="search-box"><div class="search"><div class="search1"><input type="text" class="searching" value="搜“麻衬衫”，体验与众不同"><span class="sousuo"><a href="###">搜索</a></span></div><div class="car"><a href="cart.html" class="cartex" target="_blank">购物车（<span class="num">0</span>）</a><div class="line"></div><div class="cartbox"><div class="box"><h2>您的购物车中没有任何商品。</h2></div></div></div><ul class="search2"><li>热门搜索：</li><li><a href="###">免烫衬衫</a></li><li><a href="###">羽绒服</a></li><li><a href="###">外套</a></li><li><a href="###">熊本熊</a></li><li><a href="###">运动户外</a></li><li><a href="###">帆布鞋</a></li><li><a href="###">水柔棉</a></li></ul></div></div><div class="logo"><a href="../index.html" class="logopic"><h1>凡客</h1></a><ul class="navilist"><li><a href="###">首页</a></li><li><a href="###">新品</a><div class="sec"><span></span></div></li><li><a href="###">衬衫 <em style="display:block;width:25px;height:13px;background:url(../css/img/icon_hot.png) no-repeat scroll;position:absolute;left:67px;top:-5px"></em></a><div class="sec"><span></span></div></li><li><a href="###">卫衣 <em style="display:block;width:25px;height:13px;background:url(../css/img/icon_hot.png) no-repeat scroll;position:absolute;left:67px;top:-5px"></em></a><div class="sec"><span></span></div></li><li><a href="###">女装</a><div class="sec"><span></span></div></li><li><a href="###">羽绒服</a><div class="sec"><span></span></div></li><li><a href="###">针织衫</a><div class="sec"><span></span></div></li><li><a href="###">裤装</a><div class="sec"><span></span></div></li><li><a href="###">鞋</a><div class="sec"><span></span></div></li><li><a href="###">家居配饰</a><div class="sec"><span></span></div></li></ul></div></div></body><script src="../lib/hao's query.js"></script><script>//检测是否登录
+let userphone = getCookie('userphone');
+    //顶栏显示用户名
+    if(userphone){
+        $('#loginchange').html(`您好，<a href="###" style="color:#a10000">${userphone}</a>`);
+        //渲染登录
+        $('#login1').html(`<a href="###" style="color:#a10000">退出登录</a>`);
+        $('#regin').html(`<a href="###" style="color:#a10000">更换用户</a>`);
+
+        //点击退出登录
+        $('#login1').click(function(){
+            console.log(1)
+            removeCookie('userphone');
+            alert('欢迎再来凡客！');
+            location.reload();
+        })
+    }
+    //点击跳转登录
+    $('#login1 a').click(function(){
+        location.href="login.html";
+        // console.log(1)
+        // history.go(-1);
+    })
+    //点击跳转注册
+    $('#regin a').click(function(){
+        location.href="reg.html";
+    })
+
+    //////////////////////下拉
+    function getdata(url,str,fn){
+        let p = new Promise(resolve => {
+            $.ajax({
+                type: 'get',
+                url: url,
+                data: {
+                    sql: str
+                },
+                success: str => {
+                    resolve(str)
+                }
+            })
+        });
+        p.then(data=>{
+            if (fn) {//选填
+                fn(data);
+            }
+        })
+    }
+    
+
+    function init(){
+        let url = '../api/select.php';
+        let str = 'SELECT * FROM navilist';
+        getdata(url,str,data =>{
+            let arr = JSON.parse(data);
+            /* console.log(arr) */
+            
+            let str = arr.map(item =>{
+                let str1 = (item.detail).split('，').map(item1 =>{
+                    if(item1){
+                        return `
+                    <p><a href="###">${item1}</a></p>
+                    `
+                    }
+                    
+                }).join('');
+                /* console.log(str1) */
+                return `
+                <li>
+                    
+                        ${item.kind}
+                    
+                    <div class="sec">
+                        <span></span>
+                        <div class="list">
+                            ${str1}
+                        </div>
+                    </div>
+                </li>`
+                
+            }).join('');
+            $('.navilist').html(str);
+            
+            
+            
+        })
+    }
+    init();
+    // 滑入下拉
+            $('.navilist').on("mouseover",'li',function(){
+                console.log(4)
+                
+
+                $(this).find('.sec').stop().slideDown();
+
+            })
+            // $('.navilist li').hover(function(){
+            //     $('.sec').show()
+            // },function(){
+            //     $('.sec').hide()
+            // })
+            $('.navilist').on('mouseout','li',function(){
+                // $(ev.target).children('.sec').slideUp();
+  
+
+                $(this).find('.sec').stop().slideUp();
+            })  
+    //跳转列表页
+    $('.navilist').click(function(){
+        // console.log(1)
+        window.open('list.html');
+    })</script></html>
